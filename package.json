@@ -1,0 +1,20 @@
+{
+  "name": "meteor-mocha-grep-repro",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "TEST_CLIENT=0 meteor test --once --driver-package meteortesting:mocha",
+    "test:grep": "TEST_CLIENT=0 MOCHA_GREP='good suite' meteor test --once --driver-package meteortesting:mocha"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.23.5",
+    "meteor-node-stubs": "^1.2.12"
+  },
+  "devDependencies": {},
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.js",
+      "server": "server/main.js"
+    }
+  }
+}
